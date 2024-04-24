@@ -24,12 +24,18 @@ ol.list{list-style-type:decimal !important; margin-left: 5%;padding-bottom: 2%;}
     #horizontal-multilevel-menu {display:flex}
     #horizontal-multilevel-menu > li {margin:0; height:70px; display:flex; align-items:center}
     #horizontal-multilevel-menu > li > span,
-    #horizontal-multilevel-menu > li > a {border-radius:4px; padding:10px 16px; width:auto; height:auto}
-    #horizontal-multilevel-menu > li.item-selected > span {background:#E5F7F7}
+    #horizontal-multilevel-menu > li > a {border-radius:4px; padding:10px 16px; width:auto; height:auto; transition:background 0.2s}
+    #horizontal-multilevel-menu > li:hover > a.root-item,
+    #horizontal-multilevel-menu > li:hover > a.root-item-selected,
+    #horizontal-multilevel-menu > li:hover > span,
+    #horizontal-multilevel-menu > li.item-selected > a.root-item,
+    #horizontal-multilevel-menu > li.item-selected > a.root-item-selected,
+    #horizontal-multilevel-menu > li.item-selected > span {background:#E5F7F7; color:#115A69}
     #horizontal-multilevel-menu > li > ul::before {content:""; position:absolute; left:0; top:-5px; right:0; height:5px; background:transparent}
     #horizontal-multilevel-menu > li > ul > li {margin:2px 0 0 0}
     #horizontal-multilevel-menu > li > ul > li:first-child {margin:0}
     #horizontal-multilevel-menu > li > ul > li > a {border-radius:4px; padding:10px 12px; margin:0 6px}
+    #horizontal-multilevel-menu > li > ul > li > a:hover,
     #horizontal-multilevel-menu > li > ul > li.item-selected > a {background:#00969C; color:#FFFFFF}
 
     .fixed-header_top .wrap {margin:0 auto; display:flex; align-items:center}
@@ -39,7 +45,16 @@ ol.list{list-style-type:decimal !important; margin-left: 5%;padding-bottom: 2%;}
     .fixed-header_top .header--btnenter__right {float:none; order:2; margin:0}
     .fixed-header_top .nav {float:none; right:auto; order:1; margin:0 40px 0 0}
     #horizontal-multilevel-menu > li {height:58px}
+    
 }
+
+.btn--close {border:none; width:36px; height:36px}
+.btn--close {display:block; width:36px; height:36px; padding:0}
+.btn--close .box-btn-close,
+.btn--close:hover .box-btn-close {display:block; width:36px; height:36px; position:relative; left:auto; top:auto; transform:none}
+.btn--close .box-btn-close svg,
+.btn--close:hover .box-btn-close svg {display:block; width:36px; height:36px; fill:#03ADB4; transition:fill 0.2s; stroke:none; transform:none; left:auto; top:auto}
+.btn--close:hover .box-btn-close svg {fill:#FFFFFF}
 
 .modal .modal--enter {width:360px}
 .modal--enter .wrap {margin:0; padding:60px 10px 0 10px; width:100%; box-sizing:border-box}
